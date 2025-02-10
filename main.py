@@ -56,4 +56,4 @@ def zad_2():
     print(decode, len(decode), sep='\n')
 
 
-zad_2()
+zad_1()
