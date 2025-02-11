@@ -51,7 +51,7 @@ def zad_2():
         elif a == c:
             symb1, symb2 = row()
         decode += symb1 + symb2
-        text = text.replace(buf, "")
+        text = text[2:]
 
     print(decode, len(decode), sep='\n')
 
