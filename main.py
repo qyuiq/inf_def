@@ -39,7 +39,7 @@ def zad_2():
     text = "МВЖРЗОЗБФЩЖПШДМЛФГТЕНГМВГЬ".lower()
     print(len(text))
     decode = ""
-    while(not len(text) == 0):
+    while not len(text) == 0:
         buf = text[0:2]
         symb1, symb2 = "", ""
         a, b = find_index(buf[0])
@@ -56,4 +56,4 @@ def zad_2():
     print(decode, len(decode), sep='\n')
 
 
-zad_1()
+zad_2()
