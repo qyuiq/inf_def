@@ -1,3 +1,4 @@
+#шифр цезаря
 def zad_1():
     alphabet = ["а", "б", "в", "г", "д", "е", "ж", "з", "и", "к", "л", "м", 'н', "о", "п",
                 "р", "с", "т","у", "ф", "х", "ц", "ч", "ш", "щ", "ь", "ы", "ъ", "э", "ю", "я"]
@@ -10,7 +11,7 @@ def zad_1():
         print(k)
 
 
-
+#шифр Плейфера
 def zad_2():
 
     def find_index(char):
@@ -56,4 +57,18 @@ def zad_2():
     print(decode, len(decode), sep='\n')
 
 
-zad_2()
+#шифр перестановкой только внутри блока данных
+def zad_3():
+    key = '365142'
+    text = "иицпнрвузпи_ьгоанлпгоор_мрирмааяионв"
+    blocks = [text[i:i+len(key)] for i in range(0, len(text), len(key))]
+    print(blocks)
+    decode = ""
+    for block in blocks:
+        for i in range(len(block)):
+            decode += block[key.index(str(i+1))]
+    print(decode)
+
+
+
+zad_3()
