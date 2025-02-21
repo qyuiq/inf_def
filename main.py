@@ -38,7 +38,6 @@ def zad_2():
                 ["т", "ф", "х", "ц", "ч", "ш"],
                 ["щ", "ь", "ы", "э", "ю", "я"]]
     text = "МВЖРЗОЗБФЩЖПШДМЛФГТЕНГМВГЬ".lower()
-    print(len(text))
     decode = ""
     while not len(text) == 0:
         buf = text[0:2]
@@ -54,7 +53,7 @@ def zad_2():
         decode += symb1 + symb2
         text = text[2:]
 
-    print(decode, len(decode), sep='\n')
+    print(decode)
 
 
 #шифр перестановкой только внутри блока данных
@@ -62,7 +61,6 @@ def zad_3():
     key = '365142'
     text = "иицпнрвузпи_ьгоанлпгоор_мрирмааяионв"
     blocks = [text[i:i+len(key)] for i in range(0, len(text), len(key))]
-    print(blocks)
     decode = ""
     for block in blocks:
         for i in range(len(block)):
@@ -71,4 +69,4 @@ def zad_3():
 
 
 
-zad_3()
+zad_1()
